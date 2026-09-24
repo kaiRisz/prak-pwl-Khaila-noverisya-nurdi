@@ -31,7 +31,7 @@
 
         .page-wrapper {
             min-height: 100vh;
-            padding: 50px 20px;
+            padding: 140px 20px 120px;
         }
 
         .main-card {
@@ -218,12 +218,86 @@
                 flex-direction: column;
             }
         }
+
+        .navbar-custom {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+
+            width: 100%;
+            padding: 18px 30px;
+
+            background: rgba(8, 25, 45, 0.92);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+
+            backdrop-filter: blur(12px);
+        }
+
+        .navbar-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .navbar-brand-custom {
+            color: white;
+            text-decoration: none;
+            font-size: 19px;
+            font-weight: 700;
+        }
+
+        .navbar-links {
+            display: flex;
+            gap: 25px;
+        }
+
+        .navbar-link {
+            color: #c8dcf2;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .navbar-link:hover {
+            color: white;
+        }
+
+        .footer-custom {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            z-index: 1000;
+
+            width: 100%;
+            padding: 20px;
+
+            text-align: center;
+
+            color: #9fb6cf;
+            font-size: 13px;
+
+            background: rgba(8, 25, 45, 0.92);
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+
+            backdrop-filter: blur(12px);
+        }
+
+        .footer-custom p {
+            margin: 0;
+        }
     </style>
 </head>
 
 <body>
 
+    @include('components.navbar')
+
     @yield('content')
+
+    @include('components.footer')
 
     <script
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
