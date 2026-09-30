@@ -12,6 +12,14 @@
             <a href="{{ route('user.create') }}" class="navbar-link">
                 Tambah User
             </a>
+
+            <a href="{{ route('matakuliah.index') }}" class="navbar-link">
+                Daftar Mata Kuliah
+            </a>
+
+            <a href="{{ route('matakuliah.create') }}" class="navbar-link">
+                Tambah Mata Kuliah
+            </a>
         </div>
     </div>
 </nav>
