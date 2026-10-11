@@ -22,18 +22,33 @@
             font-family: "Segoe UI", Arial, sans-serif;
 
             background:
-                radial-gradient(circle at 15% 20%, rgba(78, 151, 255, 0.20), transparent 30%),
-                radial-gradient(circle at 85% 80%, rgba(0, 115, 230, 0.18), transparent 30%),
-                linear-gradient(135deg, #07111f, #0d1d32 45%, #102c49);
+                radial-gradient(
+                    circle at 15% 20%,
+                    rgba(78, 151, 255, 0.20),
+                    transparent 30%
+                ),
+                radial-gradient(
+                    circle at 85% 80%,
+                    rgba(0, 115, 230, 0.18),
+                    transparent 30%
+                ),
+                linear-gradient(
+                    135deg,
+                    #07111f,
+                    #0d1d32 45%,
+                    #102c49
+                );
 
             color: #eaf3ff;
         }
 
+        /* AREA KONTEN UTAMA */
         .page-wrapper {
             min-height: 100vh;
-            padding: 140px 20px 120px;
+            padding: 110px 20px 110px;
         }
 
+        /* CARD */
         .main-card {
             width: 100%;
             max-width: 850px;
@@ -52,6 +67,7 @@
                 inset 0 1px 0 rgba(255, 255, 255, 0.7);
         }
 
+        /* JUDUL */
         .page-title {
             font-size: 32px;
             font-weight: 700;
@@ -64,6 +80,7 @@
             margin-bottom: 30px;
         }
 
+        /* FORM */
         .form-label {
             font-weight: 600;
             color: #263f5c;
@@ -95,6 +112,7 @@
             background: #ffffff;
         }
 
+        /* BUTTON */
         .btn-metal {
             border: none;
             border-radius: 12px;
@@ -126,8 +144,10 @@
                 0 12px 24px rgba(31, 95, 158, 0.40);
         }
 
+        /* TABLE */
         .table-container {
             overflow-x: auto;
+
             border-radius: 16px;
             border: 1px solid #dce6f1;
         }
@@ -167,11 +187,11 @@
             background: #f1f7fd;
         }
 
+        /* BADGE KELAS */
         .badge-kelas {
             display: inline-block;
 
             padding: 6px 12px;
-
             border-radius: 20px;
 
             background: #e6f1ff;
@@ -181,15 +201,17 @@
             font-weight: 600;
         }
 
+        /* HEADER DALAM CARD */
         .top-bar {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            gap: 20px;
 
+            gap: 20px;
             margin-bottom: 25px;
         }
 
+        /* BRAND */
         .brand {
             font-size: 14px;
             font-weight: 700;
@@ -199,36 +221,21 @@
             color: #4d91d1;
         }
 
-        @media (max-width: 576px) {
-            .page-wrapper {
-                padding: 25px 12px;
-            }
-
-            .main-card {
-                padding: 24px 18px;
-                border-radius: 18px;
-            }
-
-            .page-title {
-                font-size: 26px;
-            }
-
-            .top-bar {
-                align-items: flex-start;
-                flex-direction: column;
-            }
-        }
-
+        /* NAVBAR */
         .navbar-custom {
             position: fixed;
+
             top: 0;
             left: 0;
+
             z-index: 1000;
 
             width: 100%;
+
             padding: 18px 30px;
 
             background: rgba(8, 25, 45, 0.92);
+
             border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 
             backdrop-filter: blur(12px);
@@ -246,6 +253,7 @@
         .navbar-brand-custom {
             color: white;
             text-decoration: none;
+
             font-size: 19px;
             font-weight: 700;
         }
@@ -258,6 +266,7 @@
         .navbar-link {
             color: #c8dcf2;
             text-decoration: none;
+
             font-size: 14px;
         }
 
@@ -265,13 +274,17 @@
             color: white;
         }
 
+        /* FOOTER */
         .footer-custom {
             position: fixed;
+
             bottom: 0;
             left: 0;
+
             z-index: 1000;
 
             width: 100%;
+
             padding: 20px;
 
             text-align: center;
@@ -280,6 +293,7 @@
             font-size: 13px;
 
             background: rgba(8, 25, 45, 0.92);
+
             border-top: 1px solid rgba(255, 255, 255, 0.12);
 
             backdrop-filter: blur(12px);
@@ -288,6 +302,106 @@
         .footer-custom p {
             margin: 0;
         }
+
+        /* MOBILE */
+        @media (max-width: 576px) {
+
+            .page-wrapper {
+                padding: 100px 12px 100px;
+            }
+
+            .main-card {
+                padding: 24px 18px;
+                border-radius: 18px;
+            }
+
+            .page-title {
+                font-size: 26px;
+            }
+
+            .top-bar {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+
+            .navbar-custom {
+                padding: 15px;
+            }
+
+            .navbar-inner {
+                align-items: flex-start;
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .navbar-links {
+                gap: 15px;
+            }
+        }
+
+        .action-group { display: flex; align-items: center; gap: 8px; }
+.action-group form { margin: 0; }
+
+.btn-edit, .btn-delete {
+    border: none;
+    border-radius: 10px;
+    padding: 6px 14px;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.btn-edit   { background: #fff3cd; color: #8a6100; }
+.btn-edit:hover   { background: #ffe69c; color: #8a6100; transform: translateY(-2px); }
+.btn-delete { background: #fde2e2; color: #b02a37; }
+.btn-delete:hover { background: #f5b5b5; transform: translateY(-2px); }
+
+.action-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: nowrap;
+}
+
+.action-group form {
+    margin: 0;
+}
+
+.btn-edit,
+.btn-delete {
+    display: inline-block;
+    padding: 6px 16px;
+    border-radius: 8px;
+    background: transparent;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.4;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.btn-edit {
+    border: 1px solid #2f7bc4;
+    color: #2f7bc4;
+}
+
+.btn-edit:hover {
+    background: #2f7bc4;
+    color: #fff;
+}
+
+.btn-delete {
+    border: 1px solid #c94a4a;
+    color: #c94a4a;
+}
+
+.btn-delete:hover {
+    background: #c94a4a;
+    color: #fff;
+}
+
     </style>
 </head>
 
@@ -295,7 +409,9 @@
 
     @include('components.navbar')
 
-    @yield('content')
+    <main class="page-wrapper">
+        @yield('content')
+    </main>
 
     @include('components.footer')
 
